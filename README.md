@@ -1,4 +1,4 @@
-# Newton2Law
+# Newtons 2nd Law
 A simple modified Atwood machine simulation to use for an interactive teaching demo. [Try it here!](https://hartery5.github.io/Newton2Law/)
 
 ## Background
