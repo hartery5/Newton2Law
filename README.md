@@ -114,27 +114,27 @@ $$+\vec{F_{N,1,y}} + \vec{F_{g,1,y}} = m_1\vec{a_{1,y}}$$
 
 We now switch from vector components to signed scalar components. Sign conventions will be standard (x increases rightward, y increases upward). Doing so, we find:
 
-$$ +F_{T,1} = m_1a_{1,x}$$
+$$ +F_{T,1,x} = m_1a_{1,x}$$
 
-$$ +F_{N,1} - F_{g,1} = m_1a_{1,y}$$
+$$ +F_{N,1,y} - F_{g,1,y} = m_1a_{1,y}$$
 
 We physically observe that $a_{1,y} = 0$:
 
-$$ +F_{T,1} = m_1a_{1,x}$$
+$$ +F_{T,1,x} = m_1a_{1,x}$$
 
-$$ +F_{N,1} - F_{g,1} = 0$$
+$$ +F_{N,1,y} - F_{g,1,y} = 0$$
 
 Phew... it's worth going through that formal exercise at least once. But, for object two we'll be a bit quicker about it:
 
-$$ +F_{T,2} - F_{g,2} = -m_2a_{2,y}$$
+$$ +F_{T,2,y} - F_{g,2,y} = -m_2a_{2,y}$$
 
 Notice that acceleration takes on a sign based on our convention! $a_{2,y}$ is the magnitude of the acceleration of object 2 along the vertical axis. 
 
-We might have too many variables... however, we can recognize something about connected objects: $`a_{1,x}=a_{2,y}=a`$. Further, the tension in an ideal, massless string is equal at all points: $`F_{T,1}=F_{T,2}=F_T`$. We simplify our system as follows:
+We might have too many variables... however, we can recognize something about connected objects: $`a_{1,x}=a_{2,y}=a`$. Further, the tension in an ideal, massless string is equal at all points: $`F_{T,1,x}=F_{T,2,y}=F_T`$. We simplify our system as follows:
 
 $$ F_{T} = m_1a$$
 
-$$ +F_{N,1} - F_{g,1} = 0$$
+$$ +F_{N,1,y} - F_{g,1,y} = 0$$
 
 $$ +F_{T} - F_{g,2} = -m_2a$$
 
@@ -142,15 +142,19 @@ Recall that weight is the product of an object's mass and the acceleration due t
 
 $$ F_g = m g$$
 
+We also observe that since gravity only acts along the y-axis:
+
+$ F_g = F_{g,1,y} $
+
 So, 
 
 $$ +F_{T} = m_1a$$
 
-$$ +F_{N,1} - m_1g = 0$$
+$$ +F_{N,1,y} - m_1g = 0$$
 
 $$ +F_{T} - m_2g = -m_2a$$
 
-Equation (1) can be substituted into Equation (3):
+Equation (2) doesn't yield anything interesting. However, Equation (1) can be substituted into Equation (3):
 
 $$ m_1a - m_2g = -m_2a$$
 
