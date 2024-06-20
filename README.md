@@ -41,6 +41,8 @@ Keep m$`_1`$ = 750 g and remove friction by setting $`\mu`$=0.
 
 Try a few experiments varying the mass of m$`_2`$. 
 
+How would you describe the motion? Motionless? Constant Velocity? Constant Acceleration?
+
 Notice which forces change in magnitude as m$`_2`$ varies (AND, which forces do not change). 
 
 How would you describe the relationship between the acceleration of m$`_1`$ and the mass of m$`_2`$? Proportional? Inversely Proportional? Linear? Non-Linear?
