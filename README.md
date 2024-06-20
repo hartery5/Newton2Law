@@ -36,7 +36,7 @@ Well, what happens when there is a net force acting on an object? The object acc
 Now keep m$`_2`$ constant and vary m$`_1`$. How would you describe the relationship between the acceleration of m$`_1`$ and its own mass? Proportional? Inversely Proportional? Linear? Non-Linear? 
 
 #### Newton's 2nd Law
-This latest experiment tells us something rather interesting: if the net force exerted on an object remains constant, then the acceleration of an object is inversely proportional to its own mass! This makes intuitive sense: my cat can knock a book off the shelf with a light push, but the same push could not tip over the bookshelf (thankfully...). We can summarize Newton's 2nd Law, thusly:
+This latest experiment should reveal something interesting: if the net force exerted on an object remains constant, then the acceleration of an object is inversely proportional to its own mass! This makes intuitive sense: my cat can knock a book off the shelf with a light push, but the same push could not tip over the bookshelf (thankfully...). We can summarize Newton's 2nd Law, thusly:
 
 $$\vec{a} = \frac{\vec{F_{net}}}{m}$$
 
@@ -50,18 +50,19 @@ Notice that at this maximum value of $`\mu`$, the force of friction equals the f
 ##### Sub-Experiment A
 Begin decreasing the value of $\mu$.
 
-Notice that as you decrease the value of $\mu$, static friction remains equal and opposite to the external force that wants to set the object in motion over a range of values of $`\mu`$. However, as you continue to decrease $\mu$, you can observe a threshold where the force of friction becomes "kinetic", $F_k$: in other words, the object will slide when released. 
+Notice what happens to $F_s$ as $\mu$ is varied.
 
 ##### Sub-Experiment B
 Continue to decrease the value of $\mu$ now that the object experiences kinetic friction.
 
-Notice that the force of kinetic friction *is* proportional to $`\mu`$: as you decrease its value, the force of kinetic friction decreases.
+Notice what happens to $F_k$ as $\mu$ is varied.
 
 ##### Sub-Experiment C
 Set the value of $`\mu`$ to some value where kinetic friction is acting. Vary $`m_1`$.
 
-Notice that $F_{k}$ is proportional to the weight of the object.
+Notice what happens to $F_{k}$ as $`m_1`$ is varied.
 
+##### Summary
 From these sub-experiments, you should take away the following:
 
 (1) If the sum of the other external forces parallel to the plane of contact is less than some critical threshold, $F_{s,max}$, then the force of static friction will be equal and opposite to the sum of the other external forces parallel to the plane of contact.
@@ -78,13 +79,15 @@ $$F_{k} = \mu_k F_{N}$$
 In principle, there are two different coefficients of friction for an object: static (s) and kinetic (k). They are often close in value and typically $`\mu_k < \mu_s`$.
 
 ## Math
-I would suggest revisiting this once we have made more headway in Chapter 5. The mathematics is rather tedious and it involves introducing many things, which are better understood if they are spread across many lectures. 
+I would suggest revisiting this once we have made more headway in Chapter 5. The tedium of vector mathematics is presented in its entirety for clarity (to whom?).
 
-We will analyze the system as it slides with kinetic friction. For the cart on the table, the net force results from the sum of all forces:
+We will analyze the cart on the table as it slides with kinetic friction. The net force results from the sum of all forces:
 
-$$ \vec{F_{net,1}} = \sum_i \vec{F_{i,1}} = \vec{F_{N,1}} +  \vec{F_{k,1}} + \vec{F_{g,1}} + \vec{F_{T,1}}$$
+$$ \vec{F_{net,1}} = \sum_i \vec{F_{i,1}} $$ 
 
-It is convenient to express Newton's Laws along our independent axes of motion, y and x. 
+$$ \vec{F_{net,1}} = \vec{F_{N,1}} +  \vec{F_{k,1}} + \vec{F_{g,1}} + \vec{F_{T,1}}$$
+
+It is convenient to express Newton's Laws along our independent axes of motion, y and x. Along x:
 
 $$ \vec{F_{net,1,x}} = \sum_i \vec{F_{i,1,x}} $$
 
@@ -92,7 +95,7 @@ $$ \vec{F_{net,1,x}} = \vec{F_{N,1,x}} +  \vec{F_{k,1,x}} + \vec{F_{g,1,x}} + \v
 
 $$ \vec{F_{net,1,x}} = \vec{F_{k,1,x}} + \vec{F_{T,1,x}} $$
 
-Briefly:
+And along y:
 
 $$ \vec{F_{net,1,y}} = \vec{F_{N,1,y}} + \vec{F_{g,1,y}}$$
 
