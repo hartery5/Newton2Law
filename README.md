@@ -86,7 +86,7 @@ Notice what happens to $F_{k}$ as $`m_1`$ is varied.
 ## Math
 I would suggest revisiting this once we have made more headway in Chapter 5. The tedium of vector mathematics is presented in its entirety for clarity (to whom?).
 
-We will analyze the cart on the table as it slides without. The net force results from the sum of all forces:
+We will analyze the cart on the table as it slides frictionlessly across the table (see advanced exercise for friction). The net force results from the sum of all forces:
 
 $$ \vec{F_{net,1}} = \sum_i \vec{F_{i,1}} $$ 
 
@@ -98,9 +98,11 @@ $$ \vec{F_{net,1,x}} = \sum_i \vec{F_{i,1,x}} $$
 
 $$ \vec{F_{net,1,x}} = \vec{F_{N,1,x}} + \vec{F_{g,1,x}} + \vec{F_{T,1,x}} $$
 
+It is obvious that both the normal force and weight force have no component along the x-axis:
+
 $$ \vec{F_{net,1,x}} = \vec{F_{T,1,x}} $$
 
-And along y:
+Similar analysis along the y-axis yields:
 
 $$ \vec{F_{net,1,y}} = \vec{F_{N,1,y}} + \vec{F_{g,1,y}}$$
 
@@ -116,7 +118,7 @@ $$ +F_{T,1} = m_1a_{1,x}$$
 
 $$ +F_{N,1} - F_{g,1} = m_1a_{1,y}$$
 
-Our physical intuition tells us that the object accelerates along the x-axis, so:
+We physically observe that $a_{1,y} = 0$:
 
 $$ +F_{T,1} = m_1a_{1,x}$$
 
@@ -126,7 +128,7 @@ Phew... it's worth going through that formal exercise at least once. But, for ob
 
 $$ +F_{T,2} - F_{g,2} = -m_2a_{2,y}$$
 
-Notice that acceleration takes on a sign based on our convention! $a_2$ is the magnitude of the acceleration of object 2. 
+Notice that acceleration takes on a sign based on our convention! $a_{2,y}$ is the magnitude of the acceleration of object 2 along the vertical axis. 
 
 We might have too many variables... however, we can recognize something about connected objects: $`a_{1,x}=a_{2,y}=a`$. Further, the tension in an ideal, massless string is equal at all points: $`F_{T,1}=F_{T,2}=F_T`$. We simplify our system as follows:
 
