@@ -26,57 +26,60 @@ The goal of this exercise is to allow you to utilize the scientific method to ex
 
 This is accomplished by simultaneous plotting of x-t, v-t, and a-t graphs. 
 
-### (2) Newton's 1st and 2nd Law
-How does a free-body diagram help us understand motion? Imagine two people on either side of a crate of apples. They are both pushing the crate in opposite directions. If they each push with equal force, the box surely does not move. The same is true for the cart on the table. When the force of friction matches the force of tension, the cart won't move along the horizontal axis. Similarly, the normal force counteracts the force of gravity such that the cart doesn't move along the vertical axis. This forms one-half of the commonly quoted version of Newton's 1st Law: "If there is no net force acting on an object, then an object at rest will remain at rest." We will explore the other half of this statement in another lecture.
+### (2) Experiments
+To conduct an experiment, press "go". Position, velocity, and acceleration data will appear in each of the plots. A summary of the selected values and the resulting acceleration will appear to the right. After each experiment, click "reset".
 
 #### Experiment 1
-Well, what happens when there is a net force acting on an object? The object accelerates! As an experiment, keep m$`_1`$ at a constant value and remove friction by setting $`\mu`$=0. Then, try a few experiments varying the mass of m$`_2`$. First, notice which forces change in magnitude as m$`_2`$ varies (AND, which forces do not change). How would you describe the relationship between the acceleration of m$`_1`$ and the mass of m$`_2`$? Proportional? Inversely Proportional? Linear? Non-Linear?
+Set $`m_1`$ = 750 g, $`m_2`$ = 50 g, and $\mu$ = 0.1.
+
+Compare the magnitude of $F_s$ and $F_T$. Are they equal, or is one force larger than the other?
+
+What is the resulting acceleration of the cart?
 
 #### Experiment 2
-Now keep m$`_2`$ constant and vary m$`_1`$. How would you describe the relationship between the acceleration of m$`_1`$ and its own mass? Proportional? Inversely Proportional? Linear? Non-Linear? 
+Keep m$`_1`$ = 750 g and remove friction by setting $`\mu`$=0. 
 
-#### Newton's 2nd Law
-This latest experiment should reveal something interesting: if the net force exerted on an object remains constant, then the acceleration of an object is inversely proportional to its own mass! This makes intuitive sense: my cat can knock a book off the shelf with a light push, but the same push could not tip over the bookshelf (thankfully...). We can summarize Newton's 2nd Law, thusly:
+Try a few experiments varying the mass of m$`_2`$. 
 
-$$\vec{a} = \frac{\vec{F_{net}}}{m}$$
+Notice which forces change in magnitude as m$`_2`$ varies (AND, which forces do not change). 
 
-Notice my purposeful use of vector notation. The object will accelerate in the direction of the net (or unbalanced) force.
+How would you describe the relationship between the acceleration of m$`_1`$ and the mass of m$`_2`$? Proportional? Inversely Proportional? Linear? Non-Linear?
 
 #### Experiment 3
-You should leave this experiment until we've explored friction in subsequent lectures. A final experiment you can conduct is to vary $`\mu`$ while keeping m$`_1`$=750 g and m$`_2`$ = 30 g. It helps to elaborate on what $`\mu`$ represents. $`\mu`$  characterizes the amount of friction that exists between objects: $`\mu`$=0, represents no friction while $`\mu`$=1 represents a lot of friction. It will help your intuition to set $`\mu`$=0.1 initially. 
+Now keep m$`_2`$ = 50 g and vary m$`_1`$. 
 
-Notice that at this maximum value of $`\mu`$, the force of friction equals the force of tension: in other words, there is sufficient friction to keep the object from moving altogether! We call this static friction (not for "static" electricity, as it is often used in NA, but for the lack of motion). 
+Notice which forces change in magnitude as m$`_1`$ varies (AND, which forces do not change). 
+
+How would you describe the relationship between the acceleration of m$`_1`$ and its own mass? Proportional? Inversely Proportional? Linear? Non-Linear? 
+
+#### Experiment 4
+You should leave this experiment until we explore friction in subsequent lectures.
+
+It helps to elaborate on what $`\mu`$ represents. $`\mu`$ is a dimensionless quantity, independent of size and mass, which characterizes the amount of friction that exists between two objects: $`\mu`$=0, represents no friction while $`\mu`$=1 represents a lot of friction. An object can encounter static friction when it is at rest, and kinetic friction when it slides.
 
 ##### Sub-Experiment A
-Begin decreasing the value of $\mu$.
+Set m$`_1`$=750 g and m$`_2`$ = 10 g and $\mu$ = 0.04.
 
-Notice what happens to $F_s$ as $\mu$ is varied.
+Begin increasing the value of $m_2$, but keep below 40 g.
+
+Notice what happens to $F_s$ and $F_T$ as $\m_2$ is varied in this range.
 
 ##### Sub-Experiment B
-Continue to decrease the value of $\mu$ now that the object experiences kinetic friction.
+Increase $m_1$ to 40 g.
 
-Notice what happens to $F_k$ as $\mu$ is varied.
+Notice what happens to $F_k$ and $F_T$ as $\mu$ is varied in the range 0 - 0.05.
 
 ##### Sub-Experiment C
-Set the value of $`\mu`$ to some value where kinetic friction is acting. Vary $`m_1`$.
+Set $\mu$ = 0.01.
+
+Notice what happens to $F_k$ and $F_T$ as $m_2$ is varied.
+
+##### Sub-Experiment D
+Set the value of $`\mu`$=0.04.
+
+Vary $`m_1`$.
 
 Notice what happens to $F_{k}$ as $`m_1`$ is varied.
-
-##### Summary
-From these sub-experiments, you should take away the following:
-
-(1) If the sum of the other external forces parallel to the plane of contact is less than some critical threshold, $F_{s,max}$, then the force of static friction will be equal and opposite to the sum of the other external forces parallel to the plane of contact.
-
-(2) If the sum of the other external forces exceeds $F_{s,max}$, then the object will begin to slide, encountering kinetic friction, $F_{k}$.
-
-(3) The amount of kinetic friction (AND the threshold between static and kinetic friction) depends on the weight of the object.
-
-We can summarize these observations in the following set of equations:
-
-$$F_{s,max} = \mu_s F_{N}$$
-$$F_{k} = \mu_k F_{N}$$
-
-In principle, there are two different coefficients of friction for an object: static (s) and kinetic (k). They are often close in value and typically $`\mu_k < \mu_s`$.
 
 ## Math
 I would suggest revisiting this once we have made more headway in Chapter 5. The tedium of vector mathematics is presented in its entirety for clarity (to whom?).
