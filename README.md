@@ -144,7 +144,7 @@ $$ F_g = m g$$
 
 We also observe that since gravity only acts along the y-axis:
 
-$ F_g = F_{g,1,y} $
+$$ F_g = F_{g,1,y} $$
 
 So, 
 
