@@ -176,7 +176,7 @@ $$a  = g\left(\frac{\frac{m_2}{m_1}}{\frac{m_2}{m_1}+1}\right)$$
 
 When $m_1~\gg~m_2$ (i.e. $`\frac{m_2}{m_1}\simeq0`$), it can be shown that:
 
-$$ a = \frac{m_2}{m_1}g $$
+$$ a \simeq \frac{m_2}{m_1}g $$
 
 where g = 9.8 m/s$`^2`$ is the acceleration due to gravity at sea level. This should verify your prior observations from Experiment 1 and 2 that $`a_1~\propto~m_2`$ and $`a_1~\propto~\frac{1}{m_1}`$.
 
