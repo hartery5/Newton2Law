@@ -64,7 +64,7 @@ Set m$`_1`$=750 g and m$`_2`$ = 10 g and $\mu$ = 0.04.
 
 Begin increasing the value of $m_2$, but keep below 40 g.
 
-Notice what happens to $F_s$ and $F_T$ as $\m_2$ is varied in this range.
+Notice what happens to $F_s$ and $F_T$ as $m_2$ is varied in this range.
 
 ##### Sub-Experiment B
 Increase $m_1$ to 40 g.
@@ -86,19 +86,19 @@ Notice what happens to $F_{k}$ as $`m_1`$ is varied.
 ## Math
 I would suggest revisiting this once we have made more headway in Chapter 5. The tedium of vector mathematics is presented in its entirety for clarity (to whom?).
 
-We will analyze the cart on the table as it slides with kinetic friction. The net force results from the sum of all forces:
+We will analyze the cart on the table as it slides without. The net force results from the sum of all forces:
 
 $$ \vec{F_{net,1}} = \sum_i \vec{F_{i,1}} $$ 
 
-$$ \vec{F_{net,1}} = \vec{F_{N,1}} +  \vec{F_{k,1}} + \vec{F_{g,1}} + \vec{F_{T,1}}$$
+$$ \vec{F_{net,1}} = \vec{F_{N,1}} + \vec{F_{g,1}} + \vec{F_{T,1}}$$
 
 It is convenient to express Newton's Laws along our independent axes of motion, y and x. Along x:
 
 $$ \vec{F_{net,1,x}} = \sum_i \vec{F_{i,1,x}} $$
 
-$$ \vec{F_{net,1,x}} = \vec{F_{N,1,x}} +  \vec{F_{k,1,x}} + \vec{F_{g,1,x}} + \vec{F_{T,1,x}} $$
+$$ \vec{F_{net,1,x}} = \vec{F_{N,1,x}} + \vec{F_{g,1,x}} + \vec{F_{T,1,x}} $$
 
-$$ \vec{F_{net,1,x}} = \vec{F_{k,1,x}} + \vec{F_{T,1,x}} $$
+$$ \vec{F_{net,1,x}} = \vec{F_{T,1,x}} $$
 
 And along y:
 
@@ -106,19 +106,19 @@ $$ \vec{F_{net,1,y}} = \vec{F_{N,1,y}} + \vec{F_{g,1,y}}$$
 
 Applying Newton's 2nd Law:
 
-$$+\vec{F_{k,1,x}} + \vec{F_{T,1,x}} = m_1\vec{a_{1,x}}$$
+$$\vec{F_{T,1,x}} = m_1\vec{a_{1,x}}$$
 
 $$+\vec{F_{N,1,y}} + \vec{F_{g,1,y}} = m_1\vec{a_{1,y}}$$
 
 We now switch from vector components to signed scalar components. Sign conventions will be standard (x increases rightward, y increases upward). Doing so, we find:
 
-$$ F_{net,1,x} = -F_{k,1} + F_{T,1} = m_1a_{1,x}$$
+$$ +F_{T,1} = m_1a_{1,x}$$
 
-$$ F_{net,1,y} = +F_{N,1} - F_{g,1} = m_1a_{1,y}$$
+$$ +F_{N,1} - F_{g,1} = m_1a_{1,y}$$
 
 Our physical intuition tells us that the object accelerates along the x-axis, so:
 
-$$ -F_{k,1} + F_{T,1} = m_1a_{1,x}$$
+$$ +F_{T,1} = m_1a_{1,x}$$
 
 $$ +F_{N,1} - F_{g,1} = 0$$
 
@@ -130,62 +130,55 @@ Notice that acceleration takes on a sign based on our convention! $a_2$ is the m
 
 We might have too many variables... however, we can recognize something about connected objects: $`a_{1,x}=a_{2,y}=a`$. Further, the tension in an ideal, massless string is equal at all points: $`F_{T,1}=F_{T,2}=F_T`$. We simplify our system as follows:
 
-$$-F_{k,1} + F_{T} = m_1a$$
+$$ F_{T} = m_1a$$
 
 $$ +F_{N,1} - F_{g,1} = 0$$
 
 $$ +F_{T} - F_{g,2} = -m_2a$$
 
-Next, we can realize that we can express the magnitudes of some forces with respect to our independent variables, namely:
-
-$$ F_{k} = \mu F_N $$
+Recall that weight is the product of an object's mass and the acceleration due to gravity:
 
 $$ F_g = m g$$
 
 So, 
 
-$$-\mu~F_{N,1} + F_{T} = m_1a$$
+$$ +F_{T} = m_1a$$
 
 $$ +F_{N,1} - m_1g = 0$$
 
 $$ +F_{T} - m_2g = -m_2a$$
 
-Equation (2) can be substituted into Equation (1) to form a system of just two equations:
+Equation (1) can be substituted into Equation (3):
 
-$$-\mu~m_1g + F_{T} = m_1a$$
-
-$$ +F_{T} - m_2g = -m_2a$$
-
-Re-arrange each equation for $`F_{T}`$:
-
-$$F_{T} = m_1a + \mu~m_1g$$
-
-$$F_{T} = m_2g - m_2a$$
-
-Substitution:
-
-$$m_1a + \mu~m_1g = m_2g - m_2a$$
+$$ m_1a - m_2g = -m_2a$$
 
 Bring all terms with $a$ to LHS and all other terms to RHS:
 
-$$m_1a + m_2a  = m_2g - \mu~m_1g$$
+$$m_1a + m_2a  = m_2g$$
 
 Group:
 
-$$a(m_1 + m_2)  = g(m_2 - \mu~m_1)$$
+$$a(m_1 + m_2)  = m_2g$$
 
 Divide:
 
-$$a  = g\left(\frac{m_2 - \mu~m_1}{m_1+m_2}\right)$$
+$$a  = g\left(\frac{m_2}{m_1+m_2}\right)$$
 
 It's convenient to factor out $m_1$ from the numerator and denominator:
 
-$$a  = g\left(\frac{\frac{m_2}{m_1} - \mu}{\frac{m_2}{m_1}+1}\right)$$
+$$a  = g\left(\frac{\frac{m_2}{m_1}}{\frac{m_2}{m_1}+1}\right)$$
 
-When m$`_1`$ >> m$`_2`$ (i.e. $`\frac{m_2}{m_1}\simeq0`$) and $\mu$=0, it can be shown that:
+When $m_1~\gg~m_2$ (i.e. $`\frac{m_2}{m_1}\simeq0`$), it can be shown that:
 
-$$ a_1 = \frac{m_2}{m_1}g $$
+$$ a = \frac{m_2}{m_1}g $$
 
 where g = 9.8 m/s$`^2`$ is the acceleration due to gravity at sea level. This should verify your prior observations from Experiment 1 and 2 that $`a_1~\propto~m_2`$ and $`a_1~\propto~\frac{1}{m_1}`$.
+
+## Advanced Task
+Express the acceleration of cart 1 in terms of $m_1$, $m_2$ and $\mu$ by taking kinetic friction into consideration. You should find:
+
+$$ a = g \left(\frac{\frac{m_2}{m_1} - \mu}{\frac{m_2}{m_1} + 1}\right) $$
+
+Notice that the original result is recovered if $\mu=0$, as desired.
 
 
