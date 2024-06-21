@@ -60,38 +60,38 @@ function setup() {
 
   let button;
   button = createButton('Reset');
-  button.position(225, 10);
+  button.position(235, 20);
   button.mousePressed(reset);
   buttons['set'] = button;
 
   button = createButton('Go');
-  button.position(225, 35);
+  button.position(235, 45);
   button.mousePressed(animate);
   buttons['go'] = button;
 
   button = createButton('Clear data');
-  button.position(225, 60);
+  button.position(235, 70);
   button.mousePressed(clearData);
   buttons['clearData'] = button;
 
   button = createButton('Show forces');
-  button.position(225, 85);
+  button.position(235, 95);
   button.mousePressed(showForces);
   buttons['showForces'] = button;
 
   let slider;
   slider = createSlider(500, 750, 500, 25);
-  slider.position(10, 10);
+  slider.position(20, 20);
   slider.size(80);
   buttons['m1'] = slider;
 
   slider = createSlider(10, 50, 10, 10);
-  slider.position(10, 35);
+  slider.position(20, 45);
   slider.size(80);
   buttons['m2'] = slider;
 
   slider = createSlider(0, 0.1, 0, 0.01);
-  slider.position(10, 60);
+  slider.position(20, 70);
   slider.size(80);
   buttons['mu'] = slider;
 
@@ -106,13 +106,13 @@ function setup() {
   let tasks;
   let ILQs;
   e = new experiment('Overview',400);
-  tasks = ['To your left, a cart on a flat surface (m₁) is connected to a block (m₂) via a piece of string wound through two pulleys. Complete the sequence of experiments to understand how forces influence motion.','','This purpose of the experiment is two-fold:','(1) Free Body Diagrams','Click "Show forces". Vectors representing the external forces acting on each object of interest will appear. The following subscripts are used to distinguish the forces:',"s: static friction","k: kinetic friction","n: normal force","T: tension","g: gravity","","(2) Newtons Laws:","Determine what happens to an object when the sum of the forces acting along an axis is","a) zero","b) non-zero."];
+  tasks = ['To your left, a cart on a flat surface (m₁) is connected to a block (m₂) via a piece of string wound through two pulleys. Complete the sequence of experiments to understand how different forces influence the motion of the objects.','','This purpose of the experiment is two-fold:','(1) Introduce Free Body Diagrams','Click "Show forces". Vectors representing the external forces acting on each object of interest will appear. The following subscripts are used to distinguish the forces:',"s: static friction","k: kinetic friction","n: normal force","T: tension","g: gravity","","(2) Discover Newtons Laws:","Determine what happens to an object when the sum of the forces acting along an axis is","a) zero","b) non-zero."];
   e.loadTasks(tasks);
   e.expanded = true;
   experiments.push(e)
 
   e = new experiment('What do these forces represent?',370);
-  tasks = ['Fs, Static Friction','A contact force from one surface to another which resists external forces parallel to the surface.','','Fk, Kinetic Friction','Once in motion, the surfaces continue to exert forces on each other which oppose the motion.','','FN, Normal Force','A contact force from one surface to another which prevents the objects from passing through one another.','','FT, Tension','A contact force exerted by a rope on an object.','','Fg, Gravity','A non-contact force which pulls objects with mass towards one another.'];
+  tasks = ['Fs, Static Friction','A contact force from a surface which resists an object being set in motion along the plane of the surface.','','Fk, Kinetic Friction','When sliding across a surface, the surface continues to exert a force on the object which opposes its motion.','','FN, Normal Force','A contact force from a surface to another which prevents the object from passing through the surface','','FT, Tension','A contact force exerted by a rope on an object.','','Fg, Gravity','A non-contact force which pulls objects with mass towards one another.'];
   e.loadTasks(tasks);
   experiments.push(e)
 
@@ -121,8 +121,8 @@ function setup() {
   ILQs = [{"description":'Compare the magnitudes of Fs,1 and FT,1. They are:',
     "options":["equal","Fs,1 > FT,1","FT,1 > Fs,1"]},
     {"description":'Compare the magnitudes of FT,2 and Fg,2. They are:',
-      "options":["equal","Fg,2 > FT,2","Fg,2 > FT,2"]},
-    {"description":'Based on my above responses, I expect the carts to:',
+      "options":["equal","Fg,2 > FT,2","FT,2 > Fg,2"]},
+    {"description":'Based on my above responses, I expect the objects to:',
       "options":["remain motionless","move at constant speed","move with constant acceleration"]
     }
   ]
@@ -132,11 +132,11 @@ function setup() {
 
   e = new experiment('Experiment 2',420);
   tasks = ['1. Set m₁ = 750 g', '2. Set µ = 0.00', '3. Change the value of m₂','4. Use Go to perform an experiment.','5. Repeat steps 3 & 4.'];
-  ILQs = [{"description":'Based on the x-t, v-t, and a-t plots, I observe that cart 1',
-      "options":["remain motionless","moves at constant speed","moves with constant acceleration"]},
-    {"description":'While in motion the two carts:',
-        "options":["have equal acceleration","a₁ > a₂", "a₂ > a₁"]},
-    {"description":'The relationship between m₂ and acceleration seems to be:',
+  ILQs = [{"description":'Based on the x-t, v-t, and a-t plots, Cart 1 (m₁)',
+      "options":["remained motionless","moved at constant speed","moved with constant acceleration"]},
+    {"description":'While in motion the two objects had:',
+        "options":["equal acceleration","unequal acceleration, a₁ > a₂", "unequal acceleration, a₂ > a₁"]},
+    {"description":'The relationship between m₂ and the acceleration of Cart 1 seems to be:',
       "options":["Non-existent","Linearly Proportional","Inversely Proportional","Unpredictable"]
     }
   ]
@@ -180,9 +180,9 @@ function draw() {
   carts[1].m = m2;
   u = buttons['mu'].value()
 
-  text('m₁ = ' + nf(buttons['m1'].value(),3,1) + ' g', 100, 25)
-  text('m₂ = ' + nf(buttons['m2'].value(),2,1) + ' g', 100, 50)
-  text('µ  = ' + nf(buttons['mu'].value(),1,2), 100, 75)
+  text('m₁ = ' + nf(buttons['m1'].value(),3,1) + ' g', 110, 35)
+  text('m₂ = ' + nf(buttons['m2'].value(),2,1) + ' g', 110, 60)
+  text('µ  = ' + nf(buttons['mu'].value(),1,2), 110, 85)
 
   for (let i=0; i<barriers.length; i++){
     barriers[i].show();
