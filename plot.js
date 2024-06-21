@@ -40,7 +40,7 @@ class plot {
             strokeWeight(1)
             line(this.x,y,this.x+this.w,y);
             noStroke();
-            text(nf(yval,0,1),this.x-10,y);
+            text(nf(yval,0,1),this.x-12,y);
             yval -= this.ymax/this.g
         }
         pop();

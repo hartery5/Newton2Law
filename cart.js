@@ -63,40 +63,43 @@ class cart {
     show(){
         let vectors = [];
         let v;
-        v = new vector(this.x+this.w/2,this.y,this.right/20,0,'FT');
+        v = new vector(this.x+this.w/2,this.y,this.right/20,0,'FT,1');
         vectors.push(v);
         let upname;
         if (this.which==1){
-            upname = 'FN,f'
+            upname = 'FN,1'
         } else {
-            upname = 'FT'
+            upname = 'FT,2'
         }
         let leftname;
         if (this.x==449 && this.which==1){
-            leftname = 'FN,w'
+            leftname = 'Fw,1'
         } else {
             if (this.a==0){
-                leftname = 'Fs'
+                leftname = 'Fs,1'
             } else {
-                leftname = 'Fk'
+                leftname = 'Fk,1'
             }
         }
         v = new vector(this.x,this.y-this.h/2,this.up/20,-PI/2,upname);
         vectors.push(v);
-        v = new vector(this.x,this.y+this.h/2,this.down/20,PI/2,'Fg');
+        v = new vector(this.x,this.y+this.h/2,this.down/20,PI/2,'Fg,'+this.which);
         vectors.push(v);
         v = new vector(this.x-this.w/2,this.y,this.left/20,PI,leftname);
         vectors.push(v);
 
-        for (let i = 0; i<vectors.length; i++){
-            if (vectors[i].vmag>10){
-                vectors[i].show();
+        if (showVecs){
+            for (let i = 0; i<vectors.length; i++){
+                if (vectors[i].vmag>10){
+                    vectors[i].show();
+                }
             }
         }
 
         push();
         strokeWeight(3);
-        rectMode(CENTER)
+        rectMode(CENTER);
+        textSize(14);
         rect(this.x,this.y,this.w,this.h);
         textAlign(CENTER,CENTER);
         text(nf(this.m)+' g',this.x,this.y);

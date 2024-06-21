@@ -2,9 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
   }
-  canvas {
-    display: block;
-  }
+
+canvas {
+  display: block;
+}
 
 button {
   background-color: #04AA6D; /* Green */
@@ -15,8 +16,8 @@ button {
   text-decoration: none;
   border-radius: 12px;
   display: inline-block;
-  font-size: 16px;
-  font-family: 'Consolas';
+  font-size: 14px;
+  font-family: 'Roboto Mono';
 }
 
 button:hover {
