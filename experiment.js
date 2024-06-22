@@ -1,16 +1,19 @@
 class experiment {
     constructor(name,expandedHeight){
-        this.name = name;
         this.description = '';
         this.ilqs = [{"description":"","options":[]}];
         this.plot = new plot(0,0,0,0,'','','',0);
         this.tasks = [];
         this.data = {};
-        this.button = createButton('+');
+        this.button = createButton(name);
         this.expandedHeight = expandedHeight;
         this.button.position(0,0);
+        this.button.size(580,32);
+        this.button.style('font-size','18px');
+        this.button.style('text-align','start')
         this.button.hide();
         this.button.mousePressed(() => {
+            mostRecent = this;
             this.expanded = !this.expanded;
         });
         this.expanded = false;
@@ -45,6 +48,7 @@ class experiment {
     }
 
     expand(button){
+        mostRecent = this;
         this.button.expanded = !this.button.expanded;
     }
 
@@ -57,7 +61,7 @@ class experiment {
             fill(255);
             stroke(0);
             strokeWeight(3);
-            rect(0,0,this.w,this.expandedHeight,20,20);
+            rect(0,0,this.w,this.expandedHeight,12,12);
 
             let hintText = ''
             for (let i = 0; i<this.tasks.length;i++){
@@ -103,18 +107,12 @@ class experiment {
         fill('#04AA6D');
         stroke(0);
         strokeWeight(3);
-        rect(0,0,this.w,40,20,20);
+        rect(0,0,this.w,40,12,12);
         noStroke();
         fill(255);
         textAlign(LEFT,CENTER)
         textStyle(BOLD)
-        text(this.name,20,20);
-        if (this.expanded){
-            this.button.html("-");
-        } else {
-            this.button.html("+");
-        }
-        this.button.position(this.position.x+this.w-30,this.position.y+8);
+        this.button.position(this.position.x+10,this.position.y+4);
         this.button.show();
         pop();
 

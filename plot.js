@@ -14,7 +14,7 @@ class plot {
         push();
         setLineDash([2, 2]);
         let gy = this.h/this.g;
-        let gx = 9;
+        let gx = 20;
         let t = 0;
 
         textAlign(CENTER)
@@ -65,8 +65,11 @@ class plot {
 
         let px = 0;
         //let nx = 1.24;
-        let nx = 0.6
+        let nx = 1.34;
         for (let i = 0; i<(data.length-1); i++){
+            if (px>this.w){
+                continue
+            }
             line(this.x+px,this.y+this.h-this.h*data[i]/ymax,this.x+px+nx,this.y+this.h-this.h*data[i+1]/ymax);
             px+=nx
         }

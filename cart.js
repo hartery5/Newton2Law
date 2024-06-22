@@ -102,7 +102,13 @@ class cart {
         textSize(14);
         rect(this.x,this.y,this.w,this.h);
         textAlign(CENTER,CENTER);
-        text(nf(this.m)+' g',this.x,this.y);
+        //text(nf(this.m)+' g',this.x,this.y);
+        let nx = this.x-2;
+        let ny = this.y;
+        text('m',nx,ny);
+        textSize(8)
+        textAlign(LEFT);
+        text(this.which,nx+6,ny+6);
         pop();
     }
 

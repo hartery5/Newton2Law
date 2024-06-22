@@ -46,7 +46,7 @@ class vector{
       stroke(0);
       strokeWeight(1);
       let py = ny - 0.5*textAscent();
-      line(nx-3,py,nx+9,py);
+      line(nx-4,py,nx+9,py);
       line(nx+5,py-3,nx+9,py);
 
       pop();

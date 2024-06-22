@@ -13,6 +13,8 @@ let m2 = 150;
 let u = 0;
 let dt = 0.4;
 
+let mostRecent;
+
 let go = false;
 let set = true;
 let showVecs = false;
@@ -80,7 +82,7 @@ function setup() {
   buttons['showForces'] = button;
 
   let slider;
-  slider = createSlider(500, 750, 500, 25);
+  slider = createSlider(500, 750, 500, 50);
   slider.position(20, 20);
   slider.size(80);
   buttons['m1'] = slider;
@@ -105,19 +107,20 @@ function setup() {
   let e;
   let tasks;
   let ILQs;
-  e = new experiment('Overview',400);
-  tasks = ['To your left, a cart on a flat surface (m₁) is connected to a block (m₂) via a piece of string wound through two pulleys. Complete the sequence of experiments to understand how different forces influence the motion of the objects.','','This purpose of the experiment is two-fold:','(1) Introduce Free Body Diagrams','Click "Show forces". Vectors representing the external forces acting on each object of interest will appear. The following subscripts are used to distinguish the forces:',"s: static friction","k: kinetic friction","n: normal force","T: tension","g: gravity","","(2) Discover Newtons Laws:","Determine what happens to an object when the sum of the forces acting along an axis is","a) zero","b) non-zero."];
+  e = new experiment('Overview',440);
+  tasks = ['To your left, a cart on a flat surface (m₁) is connected to a block (m₂) via a piece of string wound through two pulleys. The x-t, v-t, and a-t graphs will display data for m₁ as you vary m₁, m₂, and the coefficient of friction, µ. Complete the experiments in sequence to understand how the motion of objects is a consequence of the different forces they are subject to.','','The intent of this exercise is two-fold:','(1) Introduce Free Body Diagrams','Click "Show forces". Vectors representing the external forces acting on each object of interest will appear. The following subscripts are used to distinguish forces:',"s: static friction","k: kinetic friction","n: normal force","T: tension","g: gravity","","(2) Discover Newton's Laws","Careful observation will develop your intution for the motion of an object when the sum of the forces acting along an axis is:","a) zero, or","b) non-zero."];
   e.loadTasks(tasks);
   e.expanded = true;
+  mostRecent = e;
   experiments.push(e)
 
   e = new experiment('What do these forces represent?',370);
-  tasks = ['Fs, Static Friction','A contact force from a surface which resists an object being set in motion along the plane of the surface.','','Fk, Kinetic Friction','When sliding across a surface, the surface continues to exert a force on the object which opposes its motion.','','FN, Normal Force','A contact force from a surface to another which prevents the object from passing through the surface','','FT, Tension','A contact force exerted by a rope on an object.','','Fg, Gravity','A non-contact force which pulls objects with mass towards one another.'];
+  tasks = ['Fs, Static Friction','A contact force from a surface which resists an object being set in motion along the plane of the surface.','','Fk, Kinetic Friction','When sliding across a surface, the surface continues to exert a force on the object which opposes its motion.','','FN, Normal Force','A contact force from a surface which prevents the object from passing through the surface','','FT, Tension','A contact force exerted by a rope on an object.','','Fg, Gravity','A non-contact force which pulls objects with mass towards one another.'];
   e.loadTasks(tasks);
   experiments.push(e)
 
-  e = new experiment('Experiment 1',380);
-  tasks = ['1. Set m₁ = 750 g', '2. Set m₂ = 50 g', '3. Set µ = 0.10','4. Click "Show forces"'];
+  e = new experiment('Experiment 1',420);
+  tasks = ['1. Set m₁ = 750 g', '2. Set m₂ = 50 g', '3. Set µ = 0.10','4. Click "Show forces"','5. Answer the questions below.','6. Click "Go" to see if you are correct.'];
   ILQs = [{"description":'Compare the magnitudes of Fs,1 and FT,1. They are:',
     "options":["equal","Fs,1 > FT,1","FT,1 > Fs,1"]},
     {"description":'Compare the magnitudes of FT,2 and Fg,2. They are:',
@@ -130,9 +133,9 @@ function setup() {
   e.loadILQs(ILQs);
   experiments.push(e);
 
-  e = new experiment('Experiment 2',420);
-  tasks = ['1. Set m₁ = 750 g', '2. Set µ = 0.00', '3. Change the value of m₂','4. Use Go to perform an experiment.','5. Repeat steps 3 & 4.'];
-  ILQs = [{"description":'Based on the x-t, v-t, and a-t plots, Cart 1 (m₁)',
+  e = new experiment('Experiment 2',435);
+  tasks = ['1. Set m₁ = 750 g', '2. Set µ = 0.00', '3. Set the value of m₂ to 10 g','4. Click "Go" to perform an experiment.','5. Repeat steps 3 & 4, increasing m₂ by 10 g each time.'];
+  ILQs = [{"description":'Based on the x-t, v-t, and a-t plots, m₁:',
       "options":["remained motionless","moved at constant speed","moved with constant acceleration"]},
     {"description":'While in motion the two objects had:',
         "options":["equal acceleration","unequal acceleration, a₁ > a₂", "unequal acceleration, a₂ > a₁"]},
@@ -144,8 +147,8 @@ function setup() {
   e.loadILQs(ILQs);
   experiments.push(e);
 
-  e = new experiment('Experiment 3',215);
-  tasks = ['1. Set m₂ = 10 g', '2. Set µ = 0.00', '3. Complete 3 experiments at different values of m₁.'];
+  e = new experiment('Experiment 3',260);
+  tasks = ['1. Set m₂ = 10 g', '2. Set µ = 0.00', '3. Set the value of m₁ to 500 g','4. Click "Go" to perform an experiment.','5. Repeat steps 3 & 4, increasing m₁ by 50 g each time.'];
   ILQs = [{"description":'The relationship between m₁ and acceleration seems to be:',
     "options":["Non-existent","Linearly Proportional","Inversely Proportional","Unpredictable"]
   }]
@@ -171,7 +174,7 @@ function draw() {
   textAlign(CENTER,CENTER);
   textSize(20);
   textStyle(BOLD);
-  text('Cart 1',50+475/2,340);
+  text('m₁',50+475/2,340);
   pop();
 
   m1 = buttons['m1'].value()
@@ -182,7 +185,7 @@ function draw() {
 
   text('m₁ = ' + nf(buttons['m1'].value(),3,1) + ' g', 110, 35)
   text('m₂ = ' + nf(buttons['m2'].value(),2,1) + ' g', 110, 60)
-  text('µ  = ' + nf(buttons['mu'].value(),1,2), 110, 85)
+  text('µ = ' + nf(buttons['mu'].value(),1,2), 110, 85)
 
   for (let i=0; i<barriers.length; i++){
     barriers[i].show();
@@ -250,7 +253,7 @@ function draw() {
     for (let i = 0; i<experiments.length; i++){
       experiments[i].setPosition(ex,ey);
       experiments[i].show();
-      ey+=experiments[i].h + 20;
+      ey+=experiments[i].h + 8;
     }
 
     if (run>6){
@@ -336,5 +339,15 @@ function showForces(){
     buttons["showForces"].html("Show forces");
   } else {
     buttons["showForces"].html("Hide forces");
+  }
+}
+
+function mousePressed(){
+  for (let i=0; i<experiments.length; i++){
+    if (experiments[i]==mostRecent){
+      experiments[i].expanded = true;
+    } else {
+      experiments[i].expanded = false;
+    }
   }
 }
